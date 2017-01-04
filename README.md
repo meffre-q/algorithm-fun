@@ -9,3 +9,7 @@ I increment my linked list pointer of 2 at any iteration, in the same time I inc
 Ex2: How to find if linked list has a loop ?
 
 Thanks to pointer it's very easy to find if a linked list is circular in C.
+
+
+Ex3: How to find 3rd element from end in a linked list in one pass?
+For this one I use the same tricks that I use for the first Ex.
