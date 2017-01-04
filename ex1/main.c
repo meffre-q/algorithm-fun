@@ -62,21 +62,22 @@ static void display(struct s_list *list)
 
 static unsigned short get_middle(struct s_list *list)
 {
-  void *first_node = list;
+  struct s_list *one = list;
+  struct s_list *two = list;
   unsigned short return_value = 0;
 
-  while (list)
+  while (two)
     {
-      if (list->nxt)
-	list = list->nxt;
-      if (list->nxt)
-	list = list->nxt;
+      if (two->nxt)
+	two = two->nxt;
+      if (two->nxt)
+	two = two->nxt;
       else
-	list = NULL;
-      return_value++;
+	two = NULL;
+      if (one->nxt)
+	one = one->nxt;
     }
-  list = first_node;
-  return return_value - 1;
+  return one->prv->id;
 }
 
 int main(void)
